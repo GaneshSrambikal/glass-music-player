@@ -9,36 +9,51 @@
     <title>GlassEffect</title>
 </head>
 <body>
-    <div class="wrapper">
+    <!-- background for theme -->
+    <div class="wrapper" id="theme" aria-valuetext="dark">
+        <!-- control theme -->
+        <div class="theme-control-container">
+            <div id="switch" class="switch">
+                <div id="slider" class="slider" onclick="changeTheme()"></div>
+            </div>
+        </div>
+        <!-- main container for player and visualizer -->
         <div class="container">
+            <!-- for orange circle -->
             <div class="container-circle1">
                 <div class="outer-circle1">
-                    <div class="inner-circle1">
+                    <div id="inner-circle1" class="inner-circle1">
         
                     </div>
                 </div>
             </div>
-                
+                <!-- for blue circle -->
             <div class="container-circle2">
                 <div class="outer-circle2">
-                    <div class="inner-circle2">
+                    <div id="inner-circle2" class="inner-circle2">
         
                     </div>
                 </div>
             </div>
-            <div class="rectangle">
-                <div class="music-logo">
+            <!-- music player starts here  -->
+            <div id="music-player" class="rectangle">
+                <!-- album logo -->
+                <div id="music-logo" class="music-logo">
                     <i class="fas fa-music"></i>
                 </div>
-                <div class="controls">
-                    <i class="fas fa-circle"></i>
+                <!-- track length -->
+                <div  id="controls" class="controls">
+                    <i id="control-points" class="fas fa-circle"></i>
                 </div>
-                <div class="controls-time">
+                <!-- time -->
+                <div id="controls-time" class="controls-time">
                     <div class="starts-time">1:22</div>
                     <div class="ends-time">-1:00</div>
                 </div>
-                <div class="music-name">Love Song - Jeremy AJ</div>
-                <div class="player-btn">
+                <!-- song name -->
+                <div id="music-name" class="music-name">Love Song - Jeremy AJ</div>
+                <!-- player button and controls -->
+                <div id="player-btn" class="player-btn">
                     <i class="fas fa-backward"></i>
                     <i class="fas fa-play"></i>
                     <i class="fas fa-forward"></i>
@@ -46,5 +61,6 @@
             </div>
         </div>
     </div>
+    <script src="index.js"></script>
 </body>
 </html>
