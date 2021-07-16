@@ -52,6 +52,7 @@ transition: .5s ease-in;
     height: 27px;
     float:right;
     transition:  .4s ease-in-out;
+    outline: none;
     cursor: pointer;
 }
 .container{
