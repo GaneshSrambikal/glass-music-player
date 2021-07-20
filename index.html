@@ -37,6 +37,39 @@
             </div>
             <!-- music player starts here  -->
             <div id="music-player" class="rectangle">
+                <!-- playlist -->
+                <div id="play-list" class="playlist-container">
+                    <div class="playlist">
+                        <div class="album-art"><i class="fas fa-record-vinyl"></i></div>
+                        <div class="song-name">The Weekend - I Feel it coming</div>
+                    </div>
+                    <div class="playlist">
+                        <div class="album-art"><i class="fas fa-record-vinyl"></i></div>
+                        <div class="song-name">Imagine Dragon - Believer</div>
+                    </div>
+                    <div class="playlist">
+                        <div class="album-art"><i class="fas fa-record-vinyl"></i></div>
+                        <div class="song-name">Post Melone - Sunflower</div>
+                    </div>
+                    <div class="playlist">
+                        <div class="album-art"><i class="fas fa-record-vinyl"></i></div>
+                        <div class="song-name">Love Song - Jeremy AJ</div>
+                    </div>
+                    <div class="playlist">
+                        <div class="album-art"><i class="fas fa-record-vinyl"></i></div>
+                        <div class="song-name">Queen- Bohemian Rhapsody</div>
+                    </div>
+                    <div class="playlist">
+                        <div class="album-art"><i class="fas fa-record-vinyl"></i></div>
+                        <div class="song-name">John Denver - Take me Home, Country Road</div>
+                    </div>
+                    <div class="playlist">
+                        <div class="album-art"><i class="fas fa-record-vinyl"></i></div>
+                        <div class="song-name">The Weekend - Save Your Tears</div>
+                    </div>
+                    
+                    <div id="close-lists" class="close-lists" onclick="closePlaylists()"><i class="fas fa-caret-left"></i></div>
+                </div>
                 <!-- album logo -->
                 <div id="music-logo" class="music-logo">
                     <i class="fas fa-music"></i>
@@ -54,9 +87,28 @@
                 <div id="music-name" class="music-name">Love Song - Jeremy AJ</div>
                 <!-- player button and controls -->
                 <div id="player-btn" class="player-btn">
+                    <i class="fas fa-th-list" onclick="showPlaylists()"></i>
                     <i class="fas fa-backward"></i>
                     <i class="fas fa-play"></i>
                     <i class="fas fa-forward"></i>
+                    <i class="fas fa-info" id="info" onclick="showDevCreds()"></i>
+                </div>
+                <!-- developer info -->
+                <div id="developer-info" class="developer-info">
+                    <div class="info-card">
+                        <h3>MorphiGlass Player</h3>
+                    </div>
+                    <div class="info-card">
+                        <p>Author:</p>
+                        <h4>Ganesh Srambikal</h4>
+                    </div>
+                    <div class="socials">
+                        <a href="https://github.com/GaneshSrambikal" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://twitter.com/GaneshSrambikal" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/ganesh-s-srambikal/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.behance.net/GaneshSrambikal" target="_blank"><i class="fab fa-behance"></i></a>
+                    </div>
+                    <div class="close-devsinfo" onclick="closeDevCreds()"><i class="fas fa-caret-right" ></i></div>
                 </div>
             </div>
         </div>
