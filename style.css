@@ -101,7 +101,7 @@ height: auto;
 .outer-circle2{
     /* transform: translateX(200px); */
     /* float: right; */
-    margin-left: 165px;
+    margin-left: 150px;
     background: linear-gradient(to bottom right, var(--gradAqua),var(--gradBlue));
     box-shadow: 0px 0px 20px var(--gradAqua),0px 0px 10px var(--gradBlue);
     animation: circle-two 5s infinite alternate;
@@ -393,7 +393,7 @@ cursor: pointer;
 }
 
 /* media query */
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 600px) {
     .outer-circle2{
         margin-left: 70px;
     }
