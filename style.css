@@ -391,3 +391,13 @@ cursor: pointer;
 .visibles{
     visibility: visible !important;
 }
+
+/* media query */
+@media screen and (max-width: 650px) {
+    .outer-circle2{
+        margin-left: 70px;
+    }
+    .rectangle{
+        transform: translate(50px,50px);
+    }
+}
