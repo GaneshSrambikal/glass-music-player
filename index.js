@@ -76,8 +76,8 @@ function playPause(){
         setSongsTimeStamps();
         curTimeStamp();
         setSeeker();
-        document.getElementById(String(trackCount)).style.backgroundColor = '#636363';
-        document.getElementById(String(trackCount)).style.color = '#faf9f9ee';
+        // document.getElementById(String(trackCount)).style.backgroundColor = '#636363';
+        // document.getElementById(String(trackCount)).style.color = '#faf9f9ee';
     }else{
         audioplayer.pause();
     }
@@ -136,8 +136,8 @@ function nextTrack(){
         audioplayer.play();
         playbtn.classList.toggle("fa-play");
     },2000)
-    document.getElementById(String(trackCount)).style.backgroundColor = '#636363';
-    document.getElementById(String(trackCount)).style.color = '#faf9f9ee';
+    // document.getElementById(String(trackCount)).style.backgroundColor = '#636363';
+    // document.getElementById(String(trackCount)).style.color = '#faf9f9ee';
 }
 // prev track
 function prevTrack(){
@@ -160,16 +160,16 @@ function prevTrack(){
     
 }
 function playSelectedSong(id){
-    for(let i=0;i <=6;i++){
-        if(i == id){
-            document.getElementById(String(id)).style.backgroundColor = '#636363';
-            document.getElementById(String(id)).style.color = '#faf9f9ee';
-        }
-        // else{
-        //     document.getElementById(String(i)).style.backgroundColor = 'none';
-        //     document.getElementById(String(i)).style.color = '#636363';
-        // }
-    }
+    // for(let i=0;i <=6;i++){
+    //     if(i == id){
+    //         document.getElementById(String(id)).style.backgroundColor = '#636363';
+    //         document.getElementById(String(id)).style.color = '#faf9f9ee';
+    //     }
+    //     else{
+    //         document.getElementById(String(i)).style.backgroundColor = 'none';
+    //         document.getElementById(String(i)).style.color = '#636363';
+    //     }
+    // }
     // document.getElementById(String(trackCount)).style.backgroundColor = '#636363';
     // document.getElementById(String(trackCount)).style.color = '#faf9f9ee';
     // document.getElementById(String(id)).style.backgroundColor = '#636363';
