@@ -36,34 +36,40 @@
                 </div>
             </div>
             <!-- music player starts here  -->
+            <audio id="audioplayer" controls>
+                
+                <source src="0.mp3" type="audio/mpeg">
+                
+                
+            </audio>
             <div id="music-player" class="rectangle">
                 <!-- playlist -->
                 <div id="play-list" class="playlist-container">
-                    <div class="playlist">
+                    <div class="playlist" id="0" onclick="playSelectedSong(0)">
                         <div class="album-art"><i class="fas fa-record-vinyl"></i></div>
                         <div class="song-name">The Weekend - I Feel it coming</div>
                     </div>
-                    <div class="playlist">
+                    <div class="playlist" id="1" onclick="playSelectedSong(1)">
                         <div class="album-art"><i class="fas fa-record-vinyl"></i></div>
-                        <div class="song-name">Imagine Dragon - Believer</div>
+                        <div class="song-name">Imagine Dragon - Thunder</div>
                     </div>
-                    <div class="playlist">
+                    <div class="playlist" id="2" onclick="playSelectedSong(2)">
                         <div class="album-art"><i class="fas fa-record-vinyl"></i></div>
                         <div class="song-name">Post Melone - Sunflower</div>
                     </div>
-                    <div class="playlist">
+                    <div class="playlist" id="3" onclick="playSelectedSong(3)">
                         <div class="album-art"><i class="fas fa-record-vinyl"></i></div>
-                        <div class="song-name">Love Song - Jeremy AJ</div>
+                        <div class="song-name">Billie Eilish, Khalid - lovely</div>
                     </div>
-                    <div class="playlist">
+                    <div class="playlist" id="4" onclick="playSelectedSong(4)">
                         <div class="album-art"><i class="fas fa-record-vinyl"></i></div>
                         <div class="song-name">Queen- Bohemian Rhapsody</div>
                     </div>
-                    <div class="playlist">
+                    <div class="playlist" id="5" onclick="playSelectedSong(5)">
                         <div class="album-art"><i class="fas fa-record-vinyl"></i></div>
                         <div class="song-name">John Denver - Take me Home, Country Road</div>
                     </div>
-                    <div class="playlist">
+                    <div class="playlist" id="6" onclick="playSelectedSong(6)">
                         <div class="album-art"><i class="fas fa-record-vinyl"></i></div>
                         <div class="song-name">The Weekend - Save Your Tears</div>
                     </div>
@@ -76,21 +82,22 @@
                 </div>
                 <!-- track length -->
                 <div  id="controls" class="controls">
-                    <i id="control-points" class="fas fa-circle"></i>
+                    <input type="range" name="seeker" id="control-points" min="0" value="0.3" step="1" max="100" draggable="false">
+                    <!-- <i id="control-points" class="fas fa-circle"></i> -->
                 </div>
                 <!-- time -->
                 <div id="controls-time" class="controls-time">
-                    <div class="starts-time">1:22</div>
-                    <div class="ends-time">-1:00</div>
+                    <div id="song-curtime"class="starts-time">00:00</div>
+                    <div id="song-endtime" class="ends-time">00:00</div>
                 </div>
                 <!-- song name -->
-                <div id="music-name" class="music-name">Love Song - Jeremy AJ</div>
+                <div id="music-name" class="music-name">The Weekend - I Feel it coming</div>
                 <!-- player button and controls -->
                 <div id="player-btn" class="player-btn">
                     <i class="fas fa-th-list" onclick="showPlaylists()"></i>
-                    <i class="fas fa-backward"></i>
-                    <i class="fas fa-play"></i>
-                    <i class="fas fa-forward"></i>
+                    <i class="fas fa-backward" onclick="prevTrack()"></i>
+                    <i class="fas fa-play fa-pause" id="playbtn" onclick="playPause()"></i>
+                    <i class="fas fa-forward" id="nexttrack" onclick="nextTrack()"></i>
                     <i class="fas fa-info" id="info" onclick="showDevCreds()"></i>
                 </div>
                 <!-- developer info -->

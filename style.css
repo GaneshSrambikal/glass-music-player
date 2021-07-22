@@ -186,6 +186,11 @@ height: auto;
     font-size: 15px;
     border-bottom: 0.1rem solid rgb(194, 194, 194);
     overflow: hidden;
+    cursor: pointer;
+}
+.playlist:hover{
+    background-color: #636363;
+    color: #faf9f9ee;
 }
 .album-art{
     flex: 1;
@@ -251,13 +256,41 @@ transition: 0.5s ease-in;
     color:var(--light);
     transition: 0.5s ease-in;
 }
-.controls i{
-    
-    /* color: #222; */
-    position: absolute;
+.controls #control-points{
+    width: 100%;
+    color: #333 !important;
+    /* position: absolute; */
     /* left: 59%; */
-    animation: track-point 5s infinite;
+    /* animation: track-point 5s infinite; */
 }
+input[type='range'] {
+    /* overflow: hidden; */
+    width: 100%;
+    -webkit-appearance: none;
+    background-color: var(--light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  input[type='range']::-webkit-slider-runnable-track {
+    height: 4px;
+    -webkit-appearance: none;
+    color: #13bba4;
+    /* margin-top: -1px; */
+  }
+  
+  input[type='range']::-webkit-slider-thumb {
+    width: 15px;
+    -webkit-appearance: none;
+    height: 15px;
+    border-radius: 50%;
+    cursor: ew-resize;
+    background: var(--dark);
+    /* box-shadow: -80px 0 0 80px #43e5f7; */
+    /* position: absolute; */
+    margin-top: -5px;
+  }
 .controls-time{
     width: 210px;
     display: flex;
@@ -270,8 +303,9 @@ transition: 0.5s ease-in;
 /* song name */
 .music-name{
     color:var(--light);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 400;
+    text-align:center;
 }
 /* controls button  */
 .player-btn{
@@ -283,8 +317,13 @@ transition: 0.5s ease-in;
     font-size: 20px;
     font-weight: 100;
 }
+.player-btn i{
+    outline: none;
+    transition: .6s ease-in;
+}
 .player-btn i:hover{
-cursor: pointer;
+    cursor: pointer;
+
 }
 .fa-th-list{
     cursor: pointer;
