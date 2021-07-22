@@ -28,6 +28,20 @@ justify-content: center;
 align-items: center;
 transition: .5s ease-in;
 }
+.githubrepo{
+    /* background-color: #1919D3; */
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px;
+
+}
+.githubrepo i{
+    font-size: 50px;
+    color: var(--light);
+}
 .theme-control-container{
     padding:10px;
     width: 100%;

@@ -1,5 +1,6 @@
 
 var theme = document.getElementById('theme');
+var githubrepo = document.getElementById('githubrepo')
 var slider = document.getElementById("slider");
 var switchs = document.getElementById("switch");
 var innerCircle1 = document.getElementById("inner-circle1");
@@ -35,6 +36,7 @@ function changeTheme(){
     slider.classList.toggle("leftslider");
     switchs.classList.toggle("bgdark");
     slider.classList.toggle("bglight");
+    githubrepo.classList.toggle("dark");
     
 };
 // show playlists
@@ -150,6 +152,7 @@ function playSelectedSong(id){
         playbtn.classList.toggle("fa-play");
     },6000);
     closePlaylists();
+    trackCount = id;
     
 }
 
