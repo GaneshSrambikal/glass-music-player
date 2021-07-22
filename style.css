@@ -29,9 +29,8 @@ align-items: center;
 transition: .5s ease-in;
 }
 .githubrepo{
-    /* background-color: #1919D3; */
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     position: absolute;
     top: 0;
     right: 0;
@@ -39,7 +38,7 @@ transition: .5s ease-in;
 
 }
 .githubrepo i{
-    font-size: 50px;
+    font-size: 40px;
     color: var(--light);
 }
 .theme-control-container{
@@ -113,8 +112,6 @@ height: auto;
     animation: circle-one 5s infinite;
 }
 .outer-circle2{
-    /* transform: translateX(200px); */
-    /* float: right; */
     margin-left: 150px;
     background: linear-gradient(to bottom right, var(--gradAqua),var(--gradBlue));
     box-shadow: 0px 0px 20px var(--gradAqua),0px 0px 10px var(--gradBlue);
@@ -137,15 +134,10 @@ height: auto;
     height: 450px;
     z-index: 1;
     transform: translate(100px,50px);
-    /* box-shadow: 0px 0px 10px #fff; */
-    /* filter: blur(1.2px); */
-    /* opacity: 0.5; */
-    /* animation: reflections 10s infinite; */
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    /* filter: blur(4px); */
     
 }
 /* animation for circles */
@@ -189,12 +181,10 @@ height: auto;
     overflow: hidden;
 }
 .playlist{
-    /* background-color: rgb(220, 220, 220); */
     color: rgb(99, 99, 99);
     padding: 10px;
     width: 100%;
     display: flex;
-    /* visibility: hidden; */
     justify-content: space-evenly;
     align-items: center;
     font-size: 15px;
@@ -214,8 +204,6 @@ height: auto;
     font-size: 28px;
     line-height: 5px;
     border-right: 0.5px solid rgb(169, 169, 169);
-    
-    /* background-color: brown; */
 }
 .album-art i{
     margin-right: 5px;
@@ -224,12 +212,10 @@ height: auto;
     flex: 8;
     margin-left: 5px;
     line-height: 1.4rem;
-    /* background-color: burlywood; */
 }
 .close-lists{
     width: 30px;
     height: 30px;
-    /* background-color: rgb(218, 65, 60); */
     position: absolute;
     bottom: 10px;
     right: 10px;
@@ -273,12 +259,9 @@ transition: 0.5s ease-in;
 .controls #control-points{
     width: 100%;
     color: #333 !important;
-    /* position: absolute; */
-    /* left: 59%; */
-    /* animation: track-point 5s infinite; */
 }
 input[type='range'] {
-    /* overflow: hidden; */
+
     width: 100%;
     -webkit-appearance: none;
     background-color: var(--light);
@@ -291,7 +274,6 @@ input[type='range'] {
     height: 4px;
     -webkit-appearance: none;
     color: #13bba4;
-    /* margin-top: -1px; */
   }
   
   input[type='range']::-webkit-slider-thumb {
@@ -301,8 +283,6 @@ input[type='range'] {
     border-radius: 50%;
     cursor: ew-resize;
     background: var(--dark);
-    /* box-shadow: -80px 0 0 80px #43e5f7; */
-    /* position: absolute; */
     margin-top: -5px;
   }
 .controls-time{
@@ -364,7 +344,6 @@ input[type='range'] {
     transition: 0.2s ease-in-out ;
 }
 .info-card{
-    /* background-color: rgb(220, 220, 220); */
     color: rgb(99, 99, 99);
     padding: 10px;
     width: 100%;
@@ -374,8 +353,6 @@ input[type='range'] {
     align-items: center;
     font-size: 15px;
     overflow: hidden;
-    /* border-bottom: 0.1rem solid var(--dark); */
-
 }
 .info-card i{
     font-size: 20px;
@@ -397,7 +374,6 @@ input[type='range'] {
 .close-devsinfo{
     width: 30px;
     height: 30px;
-    /* background-color: rgb(218, 65, 60); */
     position: absolute;
     bottom: 10px;
     left: 0;
