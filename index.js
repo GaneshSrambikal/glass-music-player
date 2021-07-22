@@ -120,8 +120,9 @@ var songNames =[
 console.log(playlist.children[trackCount])
 // next track
 function nextTrack(){
+    console.log(trackCount)
     // audioplayer.currentSrc = 'http://127.0.0.1:5500/Sleep%20Away.mp3';
-    if(trackCount > 6){
+    if(trackCount == 6){
         trackCount = 0;
     }else{
         trackCount++;
@@ -142,7 +143,7 @@ function nextTrack(){
 // prev track
 function prevTrack(){
     // audioplayer.currentSrc = 'http://127.0.0.1:5500/Sleep%20Away.mp3';
-    if(trackCount < 0){
+    if(trackCount == 0){
         trackCount = 6;
     }else{
         trackCount--;
