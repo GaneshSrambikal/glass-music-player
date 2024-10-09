@@ -123,7 +123,7 @@ function nextTrack() {
   } else {
     trackCount++;
   }
-  audioPlayer.innerHTML = `<source src="/audio/${trackCount}.mp3" type="audio/mpeg">`;
+  audioPlayer.innerHTML = `<source src="audio/${trackCount}.mp3" type="audio/mpeg">`;
   audioPlayer.load();
   trackname.innerHTML = songNames[trackCount];
   setTimeout(() => {
@@ -140,7 +140,7 @@ function prevTrack() {
   } else {
     trackCount--;
   }
-  audioPlayer.innerHTML = `<source src="/audio/${trackCount}.mp3" type="audio/mpeg">`;
+  audioPlayer.innerHTML = `<source src="audio/${trackCount}.mp3" type="audio/mpeg">`;
   audioPlayer.load();
   trackname.innerHTML = songNames[trackCount];
   setTimeout(() => {
@@ -150,7 +150,7 @@ function prevTrack() {
   }, 1000);
 }
 function playSelectedSong(id) {
-  audioPlayer.innerHTML = `<source src="/audio/${id}.mp3" type="audio/mpeg">`;
+  audioPlayer.innerHTML = `<source src="audio/${id}.mp3" type="audio/mpeg">`;
   audioPlayer.load();
   trackname.innerHTML = songNames[id];
   playbtn.classList.add('fa-pause');
