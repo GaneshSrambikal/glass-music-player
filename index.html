@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
     <title>Music Player - GlassMorphism</title>
-</head>
-<body>
+  </head>
+  <body>
     <!--  
         Date  : July 2021
         Author: Ganesh Srambikal
@@ -20,117 +23,149 @@
      -->
     <!-- background for theme -->
     <div class="wrapper" id="theme" aria-valuetext="dark">
-        <!-- github repo link -->
-        <div class="githubrepo"><a href="https://github.com/GaneshSrambikal/glass-music-player" target="_blank"><i id="githubrepo" class="fab fa-github"></i></a></div>
-        <!-- control theme -->
-        <div class="theme-control-container">
-            <div id="switch" class="switch">
-                <div id="slider" class="slider" onclick="changeTheme()"></div>
-            </div>
+      <!-- github repo link -->
+      <div class="githubrepo">
+        <a
+          href="https://github.com/GaneshSrambikal/glass-music-player"
+          target="_blank"
+          ><i id="githubrepo" class="fab fa-github"></i
+        ></a>
+      </div>
+      <!-- control theme -->
+      <div class="theme-control-container">
+        <div id="switch" class="switch">
+          <div id="slider" class="slider" onclick="changeTheme()"></div>
         </div>
-        <!-- main container for player and visualizer -->
-        <div class="container">
-            <!-- for orange circle -->
-            <div class="container-circle1">
-                <div class="outer-circle1">
-                    <div id="inner-circle1" class="inner-circle1">
-        
-                    </div>
-                </div>
-            </div>
-                <!-- for blue circle -->
-            <div class="container-circle2">
-                <div class="outer-circle2">
-                    <div id="inner-circle2" class="inner-circle2">
-        
-                    </div>
-                </div>
-            </div>
-            <!-- music player starts here  -->
-            <audio id="audioplayer" controls>
-                
-                <source src="/audio/0.mp3" type="audio/mpeg">
-                
-                
-            </audio>
-            <div id="music-player" class="rectangle">
-                <!-- playlist -->
-                <div id="play-list" class="playlist-container">
-                    <div class="playlist" id="0" onclick="playSelectedSong(0)">
-                        <div class="album-art"><i class="fas fa-record-vinyl"></i></div>
-                        <div class="song-name">The Weekend - I Feel it coming</div>
-                    </div>
-                    <div class="playlist" id="1" onclick="playSelectedSong(1)">
-                        <div class="album-art"><i class="fas fa-record-vinyl"></i></div>
-                        <div class="song-name">Imagine Dragon - Thunder</div>
-                    </div>
-                    <div class="playlist" id="2" onclick="playSelectedSong(2)">
-                        <div class="album-art"><i class="fas fa-record-vinyl"></i></div>
-                        <div class="song-name">Post Melone - Sunflower</div>
-                    </div>
-                    <div class="playlist" id="3" onclick="playSelectedSong(3)">
-                        <div class="album-art"><i class="fas fa-record-vinyl"></i></div>
-                        <div class="song-name">Billie Eilish, Khalid - lovely</div>
-                    </div>
-                    <div class="playlist" id="4" onclick="playSelectedSong(4)">
-                        <div class="album-art"><i class="fas fa-record-vinyl"></i></div>
-                        <div class="song-name">Queen- Bohemian Rhapsody</div>
-                    </div>
-                    <div class="playlist" id="5" onclick="playSelectedSong(5)">
-                        <div class="album-art"><i class="fas fa-record-vinyl"></i></div>
-                        <div class="song-name">John Denver - Take me Home, Country Road</div>
-                    </div>
-                    <div class="playlist" id="6" onclick="playSelectedSong(6)">
-                        <div class="album-art"><i class="fas fa-record-vinyl"></i></div>
-                        <div class="song-name">The Weekend - Save Your Tears</div>
-                    </div>
-                    
-                    <div id="close-lists" class="close-lists" onclick="closePlaylists()"><i class="fas fa-caret-left"></i></div>
-                </div>
-                <!-- album logo -->
-                <div id="music-logo" class="music-logo">
-                    <i class="fas fa-music"></i>
-                </div>
-                <!-- track length -->
-                <div  id="controls" class="controls">
-                    <input type="range" name="seeker" id="control-points" min="0" value="0.3" step="1" max="100" draggable="false">
-                    <!-- <i id="control-points" class="fas fa-circle"></i> -->
-                </div>
-                <!-- time -->
-                <div id="controls-time" class="controls-time">
-                    <div id="song-curtime"class="starts-time">00:00</div>
-                    <div id="song-endtime" class="ends-time">00:00</div>
-                </div>
-                <!-- song name -->
-                <div id="music-name" class="music-name">The Weekend - I Feel it coming</div>
-                <!-- player button and controls -->
-                <div id="player-btn" class="player-btn">
-                    <i class="fas fa-th-list" onclick="showPlaylists()"></i>
-                    <i class="fas fa-backward" onclick="prevTrack()"></i>
-                    <i class="fas fa-play fa-pause" id="playbtn" onclick="playPause()"></i>
-                    <i class="fas fa-forward" id="nexttrack" onclick="nextTrack()"></i>
-                    <i class="fas fa-info" id="info" onclick="showDevCreds()"></i>
-                </div>
-                <!-- developer info -->
-                <div id="developer-info" class="developer-info">
-                    <div class="info-card">
-                        <h3>MorphiGlass Player</h3>
-                    </div>
-                    <div class="info-card">
-                        <p>Author:</p>
-                        <h4>Ganesh Srambikal</h4>
-                    </div>
-                    <div class="socials">
-                        <a href="https://github.com/GaneshSrambikal" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://twitter.com/GaneshSrambikal" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.linkedin.com/in/ganesh-s-srambikal/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://www.behance.net/GaneshSrambikal" target="_blank"><i class="fab fa-behance"></i></a>
-                    </div>
-                    <div class="close-devsinfo" onclick="closeDevCreds()"><i class="fas fa-caret-right" ></i></div>
-                </div>
-            </div>
+      </div>
+      <!-- main container for player and visualizer -->
+      <div class="container">
+        <!-- for orange circle -->
+        <div class="container-circle1">
+          <div class="outer-circle1">
+            <div id="inner-circle1" class="inner-circle1"></div>
+          </div>
         </div>
+        <!-- for blue circle -->
+        <div class="container-circle2">
+          <div class="outer-circle2">
+            <div id="inner-circle2" class="inner-circle2"></div>
+          </div>
+        </div>
+        <!-- music player starts here  -->
+        <audio id="audioplayer" controls>
+          <source src="/audio/0.mp3" type="audio/mpeg" />
+        </audio>
+        <div id="music-player" class="rectangle">
+          <!-- playlist -->
+          <div id="play-list" class="playlist-container">
+            <div class="playlist" id="0" onclick="playSelectedSong(0)">
+              <div class="album-art"><i class="fas fa-record-vinyl"></i></div>
+              <div class="song-name">The Weekend - I Feel it coming</div>
+            </div>
+            <div class="playlist" id="1" onclick="playSelectedSong(1)">
+              <div class="album-art"><i class="fas fa-record-vinyl"></i></div>
+              <div class="song-name">Imagine Dragon - Thunder</div>
+            </div>
+            <div class="playlist" id="2" onclick="playSelectedSong(2)">
+              <div class="album-art"><i class="fas fa-record-vinyl"></i></div>
+              <div class="song-name">Post Melone - Sunflower</div>
+            </div>
+            <div class="playlist" id="3" onclick="playSelectedSong(3)">
+              <div class="album-art"><i class="fas fa-record-vinyl"></i></div>
+              <div class="song-name">Billie Eilish, Khalid - lovely</div>
+            </div>
+            <div class="playlist" id="4" onclick="playSelectedSong(4)">
+              <div class="album-art"><i class="fas fa-record-vinyl"></i></div>
+              <div class="song-name">Queen- Bohemian Rhapsody</div>
+            </div>
+            <div class="playlist" id="5" onclick="playSelectedSong(5)">
+              <div class="album-art"><i class="fas fa-record-vinyl"></i></div>
+              <div class="song-name">
+                John Denver - Take me Home, Country Road
+              </div>
+            </div>
+            <div class="playlist" id="6" onclick="playSelectedSong(6)">
+              <div class="album-art"><i class="fas fa-record-vinyl"></i></div>
+              <div class="song-name">The Weekend - Save Your Tears</div>
+            </div>
+
+            <div
+              id="close-lists"
+              class="close-lists"
+              onclick="closePlaylists()"
+            >
+              <i class="fas fa-caret-left"></i>
+            </div>
+          </div>
+          <!-- album logo -->
+          <div id="music-logo" class="music-logo">
+            <i class="fas fa-music"></i>
+          </div>
+          <!-- track length -->
+          <div id="controls" class="controls">
+            <input
+              type="range"
+              name="seeker"
+              id="control-points"
+              value="0"
+              min="0"
+              max="100"
+            />
+            <!-- <i id="control-points" class="fas fa-circle"></i> -->
+          </div>
+          <!-- time -->
+          <div id="controls-time" class="controls-time">
+            <div id="song-curtime" class="starts-time">00:00</div>
+            <div id="song-endtime" class="ends-time">00:00</div>
+          </div>
+          <!-- song name -->
+          <div id="music-name" class="music-name">
+            The Weekend - I Feel it coming
+          </div>
+          <!-- player button and controls -->
+          <div id="player-btn" class="player-btn">
+            <i class="fas fa-th-list" onclick="showPlaylists()"></i>
+            <i class="fas fa-backward" onclick="prevTrack()"></i>
+            <i
+              class="fas fa-play fa-pause"
+              id="playbtn"
+              onclick="playPause()"
+            ></i>
+            <i class="fas fa-forward" id="nexttrack" onclick="nextTrack()"></i>
+            <i class="fas fa-info" id="info" onclick="showDevCreds()"></i>
+          </div>
+          <!-- developer info -->
+          <div id="developer-info" class="developer-info">
+            <div class="info-card">
+              <h3>MorphiGlass Player</h3>
+            </div>
+            <div class="info-card">
+              <p>Author:</p>
+              <h4>Ganesh Srambikal</h4>
+            </div>
+            <div class="socials">
+              <a href="https://github.com/GaneshSrambikal" target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a href="https://twitter.com/GaneshSrambikal" target="_blank"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/ganesh-s-srambikal/"
+                target="_blank"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a href="https://www.behance.net/GaneshSrambikal" target="_blank"
+                ><i class="fab fa-behance"></i
+              ></a>
+            </div>
+            <div class="close-devsinfo" onclick="closeDevCreds()">
+              <i class="fas fa-caret-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="index.js"></script>
-</body>
+  </body>
 </html>
