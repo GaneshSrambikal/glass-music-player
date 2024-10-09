@@ -427,6 +427,6 @@ input[type='range'] {
         margin-left: 70px;
     }
     .rectangle{
-        transform: translate(50px,50px);
+        transform: translate(10%,10%);
     }
 }
