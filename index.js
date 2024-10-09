@@ -111,7 +111,7 @@ function nextTrack(){
     }else{
         trackCount++;
     }
-    audioplayer.innerHTML = `<source src="${trackCount}.mp3" type="audio/mpeg">`
+    audioplayer.innerHTML = `<source src="/audio/${trackCount}.mp3" type="audio/mpeg">`
     audioplayer.load();
     trackname.innerHTML = songNames[trackCount];
     playbtn.classList.toggle("fa-play");
@@ -129,7 +129,7 @@ function prevTrack(){
     }else{
         trackCount--;
     }
-    audioplayer.innerHTML = `<source src="${trackCount}.mp3" type="audio/mpeg">`
+    audioplayer.innerHTML = `<source src="/audio/${trackCount}.mp3" type="audio/mpeg">`
     audioplayer.load();
     trackname.innerHTML = songNames[trackCount];
     playbtn.classList.toggle("fa-play");
@@ -142,7 +142,7 @@ function prevTrack(){
 }
 function playSelectedSong(id){
     
-    audioplayer.innerHTML = `<source src="${id}.mp3" type="audio/mpeg">`
+    audioplayer.innerHTML = `<source src="/audio/${id}.mp3" type="audio/mpeg">`
     audioplayer.load();
     trackname.innerHTML = songNames[id];
     playbtn.classList.toggle("fa-play");
